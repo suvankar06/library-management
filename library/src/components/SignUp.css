@@ -2,7 +2,7 @@
 
 
 
-.login-container{
+.login-page{
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -14,7 +14,7 @@
     background-color: rgb(77, 78, 75);
 
 }
-.login-input{
+.form-group{
     padding: 8px 20px;
     border-radius: 2px;
     margin-right: 10px;

@@ -54,7 +54,7 @@ const handleLoginSubmit = (e) => {
             value={emailInput}
             onChange={handleEmailChange}
             />
-        </div>
+        </div><br/><br/>
         <div className="form-group">
             <input
             type="password"
@@ -65,9 +65,9 @@ const handleLoginSubmit = (e) => {
             value={passwordInput}
             onChange={handlePasswordChange}
             />
-        </div>
+        </div><br/><br/>
         <button type="submit" className="btn btn-primary">
-            Submit
+            Log In
         </button>
   </form>
 </div>
