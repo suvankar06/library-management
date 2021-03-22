@@ -1,66 +1,80 @@
-import React from 'react';
+import React , {useState} from 'react';
 import { useHistory} from 'react-router-dom';
 import './SignUp.css';
-//import './Dashboard';
-//import axios from 'axios';
-//import { setUserSession } from './Utils/Common';
 
 
 
 function SignUp() {
-/*  const [loading, setLoading] = useState(false);
-  const username = useFormInput('');
-  const password = useFormInput('');
-  const [error, setError] = useState(null);
+  const [emailInput, setEmailInput] = useState('');
+const [passwordInput, setPasswordInput] = useState('');
 
-  // handle button click of login form
-  const handleLogin = () => {
-    setError(null);
-    setLoading(true);
-    axios.get('http://localhost:3000/Login', { username: username.value, password: password.value }).then(response => {
-      setLoading(false);
-      setUserSession(response.data.token, response.data.user);
-      props.history.push('/dashboard');
-    }).catch(error => {
-      setLoading(false);
-      if (error.response.status === 401) setError(error.response.data.message);
-      else setError("Something went wrong. Please try again later.");
-    });
-  }*/
-  let history = useHistory();
+const history = useHistory();
 
-  const redirect = () => {
-    history.push('/Dashboard')
-  }
+const handleEmailChange = (e) => {
+    setEmailInput(e.target.value);
+}
 
+const handlePasswordChange = (e) => {
+    setPasswordInput(e.target.value);
+}
+
+const handleLoginSubmit = (e) => {
+    e.preventDefault();
+    let hardcodedCred = {
+        email: 'email@email.com',
+        password: 'password123'
+    }
+
+    if ((emailInput == hardcodedCred.email) && (passwordInput == hardcodedCred.password)) {
+        //combination is good. Log them in.
+        //this token can be anything. You can use random.org to generate a random string;
+        const token = '123456abcdef';
+        sessionStorage.setItem('auth-token', token);
+        //go to www.website.com/todo
+        history.push('/Dashboard');
+    } else {
+        //bad combination
+        alert('wrong email or password combination');
+    }
+}
+
+ 
   return (
      
-    <form className='login-container'>
-      <div className='heading'>LOG IN HERE!!!</div><br/><br/>
-      <label>
-      <h3> UserName</h3>
-       <br/> <input type="text" className='login-input' name="name" placeholder='enetr your username' />
-     </label><br/><br/>
-     <label>
-      <h3>Password</h3> 
-        <br/><input type="text"  className='login-input' name="name" placeholder='enter your password' />
-     </label><br/><br/>
-      <button  onClick={redirect}>Log In</button>
-    </form>
+    <div className="login-page">
+    <h2>Login In</h2>
+    <form autoComplete="off" onSubmit={handleLoginSubmit}>
+        <div className="form-group">
+            <input
+            type="email"
+            className="form-control"
+            id="exampleInputEmail1"
+            aria-describedby="emailHelp"
+            placeholder="Enter email"
+            value={emailInput}
+            onChange={handleEmailChange}
+            />
+        </div>
+        <div className="form-group">
+            <input
+            type="password"
+            autoComplete="new-password"
+            className="form-control"
+            id="exampleInputPassword1"
+            placeholder="Password"
+            value={passwordInput}
+            onChange={handlePasswordChange}
+            />
+        </div>
+        <button type="submit" className="btn btn-primary">
+            Submit
+        </button>
+  </form>
+</div>
    
   );
 }
 
-/*const useFormInput = initialValue => {
-  const [value, setValue] = useState(initialValue);
 
-  const handleChange = e => {
-    setValue(e.target.value);
-  }
-  return {
-    value,
-    onChange: handleChange
-  }
-}*/
 
 export default SignUp;
