@@ -3,6 +3,7 @@ import React,{useState} from "react";
 // Own Css 
 import "./Books.css";
 //import {Card} from "react-bootstrap";
+import {Link} from "react-router-dom";
 
  function Books() {
 // react Hook For State Handler
@@ -23,22 +24,35 @@ import "./Books.css";
 
   return (
     <div className="App">
+      <h1>BOOK LIST</h1>
       {
+        
         // use data State Variable For Get Data Use JavaScript Map Mathod
        data? data.map(
           function(data){
-                  return ( <div className="card">
-                   <div className='card-image'> 
-                       <img src='images/image7.jpg'></img>
-                  </div>
-                  <div className='card-content'>
-                        <h2> Book No:{data.id}</h2>
-                        <h2> Book Name:{data.name} </h2> 
-                        <h2> Rent Cost:{data.Cost}</h2>
-                        <h2> Available Copies:{data.Copies}</h2>
-                        <h2>ISBN No: {data.ISBN}</h2>
-                </div>
-            </div>
+                  return ( 
+                    <table className="table">
+    <thead>
+      <tr>
+        <th> Book No</th>
+        <th> Book Name</th>
+        <th> Rent Cost</th>
+        <th>Available Copies</th>
+        <th>ISBN No</th>
+        <th>Country</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr>
+        <td>{data.id}</td>
+        <td>{data.name} </td>
+        <td>{data.Cost}</td>
+        <td>{data.Copies}</td>
+        <td> {data.ISBN}</td>
+        <td><Link to='/rent'>Rent</Link></td>
+      </tr>
+      </tbody>
+  </table>
                   )
           }
         ):""

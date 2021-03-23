@@ -1,14 +1,28 @@
-.card-image{
-  width: 80%;
-  background-color: white;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-  margin-bottom: 25px;
+.table{
+  border-collapse: collapse;
+  width:100% ;
+  margin-bottom: 20px;
 }
-.img{
-  height: 5px;
-  width: 5px;
+.table td , .table th{
+  border:1px solid #ddd;
+  padding: 8px;
 }
-.card-content{
-  text-align: center;
-  padding: 10px 20px;
+.table th{
+ padding-top: 12px;
+ padding-bottom: 12px;
+ text-align: center;
+ background-color: #18bee7;
+ color: white;
 }
+.table td{
+  padding-top: 12px;
+ padding-bottom: 12px;
+ text-align: center;
+}
+.table thead:nth-child(even){
+background-color: #f2f2f2;
+}
+.table tr:hover{
+  background-color: #ddd;
+}
+

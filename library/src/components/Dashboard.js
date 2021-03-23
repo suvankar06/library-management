@@ -20,7 +20,7 @@ import { FiHome, FiLogOut, FiArrowLeftCircle, FiArrowRightCircle } from "react-i
 import "react-pro-sidebar/dist/css/styles.css";
 import "./Dashboard.css";
 import  Cards from "./Cards";
-import HeroSection from "./HeroSection";
+//import HeroSection from "./HeroSection";
 
 
 const Header = () => {
@@ -62,18 +62,18 @@ const Header = () => {
                 </Link>
               </MenuItem>
               <MenuItem icon={<FaSearch />}>
-                  <Link to='/'>
+                  <Link to='/Search'>
                   Search Books
                   </Link>
                   </MenuItem>
               <MenuItem icon={<FaBook />}>
-                  <Link to='/'>
+                  <Link to='/MyBooks'>
                       My Books
                   </Link>
                   </MenuItem>
               <MenuItem icon={<FaList />}><Link to='/Books'>All Books</Link></MenuItem>
-              <MenuItem icon={<FaWallet />}><Link to='/'>Wallet</Link></MenuItem>
-              <MenuItem icon={<FaUser />}><Link to='/'>Profile</Link></MenuItem>
+              <MenuItem icon={<FaWallet />}><Link to='/Wallet'>Wallet</Link></MenuItem>
+              <MenuItem icon={<FaUser />}><Link to='/Profile'>Profile</Link></MenuItem>
             </Menu>
           </SidebarContent>
           <SidebarFooter>

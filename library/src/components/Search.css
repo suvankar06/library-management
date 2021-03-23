@@ -1,0 +1,29 @@
+.visually-hidden {
+    clip: rect(0 0 0 0);
+    clip-path: inset(50%);
+    height: 1px;
+    overflow: hidden;
+    position: absolute;
+    white-space: nowrap;
+    width: 1px;
+}
+#header-search{
+    width: 50%;
+    height: 60px;
+    margin-top: 100px;
+    margin-bottom: 300px;
+    margin-left: 400px;
+}
+.search-btn{
+    height: 40px;
+    margin: 6px;
+    padding: 4px;
+    font-size: 24px;
+    margin-top: 4px;
+}
+input {
+    height: 27px;
+    margin: 4px;
+    padding: 4px;
+    font-size: 24px;
+}
