@@ -28,14 +28,16 @@ import "./Books.css";
        data? data.map(
           function(data){
                   return ( <div className="card">
-                
-                  <img src='images/image7.jpg'></img>
-                  <h2> Book No:{data.id}</h2>
-                  <h2> Book Name:{data.name} </h2> 
-                  <h2> Rent Cost:{data.Cost}</h2>
-                  <h2> Available Copies:{data.Copies}</h2>
-                  <h2>ISBN No: {data.ISBN}</h2>
-           
+                   <div className='card-image'> 
+                       <img src='images/image7.jpg'></img>
+                  </div>
+                  <div className='card-content'>
+                        <h2> Book No:{data.id}</h2>
+                        <h2> Book Name:{data.name} </h2> 
+                        <h2> Rent Cost:{data.Cost}</h2>
+                        <h2> Available Copies:{data.Copies}</h2>
+                        <h2>ISBN No: {data.ISBN}</h2>
+                </div>
             </div>
                   )
           }
