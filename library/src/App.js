@@ -6,6 +6,7 @@ import SignUp from "./components/SignUp";
 import Footer from './components/Footer';
 import React from 'react';
 import Dashboard from './components/Dashboard';
+import Books from './components/Books';
 //import PrivateRoute from './components/Utils/PrivateRoute';
 //import PublicRoute from './components/Utils/PublicRoute';
 //import { getToken, removeUserSession, setUserSession } from './components/Utils/Common';
@@ -43,6 +44,7 @@ function App() {
          <Route path='/' exact component={Home} />
          <Route path='/Sign-up' component={SignUp} />
          <Route path='/Dashboard' component={Dashboard} />
+         <Route path='/Books' component={Books} />
         </Switch>
         <Footer/>
    </Router>

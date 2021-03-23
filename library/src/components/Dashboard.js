@@ -71,7 +71,7 @@ const Header = () => {
                       My Books
                   </Link>
                   </MenuItem>
-              <MenuItem icon={<FaList />}><Link to='/'>All Books</Link></MenuItem>
+              <MenuItem icon={<FaList />}><Link to='/Books'>All Books</Link></MenuItem>
               <MenuItem icon={<FaWallet />}><Link to='/'>Wallet</Link></MenuItem>
               <MenuItem icon={<FaUser />}><Link to='/'>Profile</Link></MenuItem>
             </Menu>

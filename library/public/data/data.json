@@ -1,0 +1,11 @@
+[
+    
+    {
+     "id":1,
+     "name": "HeadFirst Python",
+     "Cost": "$10",
+     "Copies": 5,
+     "ISBN": 123456789,
+     "Image":  "./images/image7.jpg"
+    }
+ ]
